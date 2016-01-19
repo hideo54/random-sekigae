@@ -6,19 +6,19 @@ import random
 f = open('data.json', 'r')
 jsonData = json.load(f)
 f.close()
-#members
 normal = jsonData['normal']
-concerned = jsonData['concerned']
-front_seat = [3,8,9,10]
+considered = jsonData['considered']
+front_seat = [3, 9, 8, 10, 2, 4, 16, 15, 17, 14, 18, 7, 11, 1, 5]
+used_front_seat = front_seat[:len(considered)]
 
 def main():
     random.shuffle(normal)
-    random.shuffle(concerned)
+    random.shuffle(considered)
     result = []
     count = 0
     for i in range(55):
-        if i in front_seat:
-            result.append(concerned[count])
+        if i in used_front_seat:
+            result.append(considered[count])
             count += 1
         else:
             result.append(normal[i-count])
