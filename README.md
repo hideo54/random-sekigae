@@ -10,13 +10,7 @@ Ver 1.0
 
 ## 使い方
 
-1. data.json に、前に行きたい人の配列を "concerned" 、その他の人の配列を "normal" とし、書く。
-```例:
-{
-    "normal": ["寿司"],
-    "concerned": ["博多市"]
-}
-```
+1. data.json に、前に行きたい人の配列を "concerned" 、その他の人の配列を "normal" とし、書く。(例: data-sample.json)
 2. Python 2.6 以上の環境で sekigae.py を実行。
 
 ## 使用条件
