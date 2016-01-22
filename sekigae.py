@@ -2,18 +2,21 @@
 import json
 import random
 
-# Read json data:
-f = open('data.json', 'r')
-jsonData = json.load(f)
-f.close()
-normal = jsonData['normal']
-considered = jsonData['considered']
-front_seat = [3, 9, 8, 10, 2, 4, 16, 15, 17, 14, 18, 7, 11, 1, 5]
-used_front_seat = front_seat[:len(considered)]
-
 def main():
+    # Read json data:
+    f = open('data.json', 'r')
+    jsonData = json.load(f)
+    f.close()
+    normal = jsonData['normal']
+    considered = jsonData['considered']
+    front_seat = [3, 9, 8, 10, 2, 4, 16, 15, 17, 14, 18, 7, 11, 1, 5]
+    used_front_seat = front_seat[:len(considered)]
+
+    # Shuffle the array:
     random.shuffle(normal)
     random.shuffle(considered)
+
+    # Output:
     result = []
     count = 0
     for i in range(55):
